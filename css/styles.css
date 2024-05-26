@@ -214,9 +214,9 @@ nav a {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  height: 60vh;
+  height: 470px;
   margin: 0 6rem;
-
+  overflow: hidden;
 }
 
 .mockup-section .hero-phone-mockup {
