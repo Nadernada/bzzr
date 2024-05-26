@@ -373,6 +373,106 @@ nav a {
 }
 
 
+
+
+/* Keys */
+
+.keys {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  position: relative;
+  background: url(../assets/images/keys-shape.svg) top no-repeat;
+}
+
+.keys .top-left {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  top: 0;
+  left: -70%;
+}
+
+.keys .text {
+  text-align: center;
+  width: 40%;
+}
+
+.keys .text h3 {
+  margin: 0;
+}
+
+.keys .top-half .text h4 {
+  color: var(--secondary);
+}
+
+.keys .icon {
+  position: absolute;
+}
+
+.keys .tasks {
+  top: 5%;
+  right: 50%;
+}
+
+.keys .setting {
+  bottom: 60%;
+  right: -5%;
+}
+
+.keys .avatar {
+  top: 40%;
+  left: -25%;
+}
+
+.keys .market {
+  bottom: 20%;
+  right: -20%;
+}
+
+.keys .bottom-left {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  bottom: 10%;
+  left: -70%;
+}
+
+.keys .top-right {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  top: 0;
+  right: -120%;
+}
+
+.keys .bottom-right {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  gap: 1rem;
+  bottom: 35%;
+  right: -120%;
+}
+
+/* .keys .text p {
+  width: 40%;
+} */
+
+.keys img {
+  height: fit-content;
+}
+
+
+
+
+
 /* Testimonials */
 
 .testimonials {
