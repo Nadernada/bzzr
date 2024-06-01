@@ -2359,6 +2359,10 @@ section .team .left, section .team .right {
 
 @media only screen and (max-width: 600px) {
 
+  .keys .main-img {
+    height: auto;
+  }
+
   
 .two-columns .fourth {
   display: flex;
