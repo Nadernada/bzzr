@@ -7,11 +7,22 @@
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="about.html">
+      <li class="link">A Propos</li>
+    </a>
+    <a href="services.html">
+      <li class="link">Nos Services</li>
+    </a>
+    <a href="services.html#faq">
+      <li class="link">FAQ</li>
+    </a> 
+  </div>
   <div class="nav-container">
     <nav>
       <div class="logo-container">
         <a href="index.html">
-          <img src="./assets/images/Logo-Mark.svg" alt="logo Layan" />
+          <img src="./assets/images/Logo-Mark.svg" alt="logo Layan" class="logo-nav" />
         </a>
       </div>
       <div class="nav-links">
@@ -25,11 +36,13 @@
           <li class="link">FAQ</li>
         </a>  
       </div>
-      <a href="contact.html">
+      <a href="contact.html" class="cta">
         <button class="btn-primary">
           Demandez un devis
         </button>
       </a>
+
+      <img src="./assets/images/icons/hamburger.png" alt="hamburger " class="menu-icon" id="menuIcon">
     </nav>
   </div>
 
@@ -75,25 +88,34 @@
         </div>
       </div>
       <div class="links">
-        <p>Product</p>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
+        <p>Quick Links</p>
+          <a href="services.html">
+            <li>Nos services</li>
+          </a>
+          <a href="about.html">
+            <li>A propos</li>
+          </a>
+          <a href="contact.html">
+            <li>contact</li>
+          </a>
+          <a href="services.html#faq">
+            <li>FAQs</li>
+          </a>
       </div>
       <div class="links">
-        <p>Product</p>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
+        <p>Legal</p>
+          <li>Terms and policies</li>
+          <li>Privacy policy</li>
+          <li>Sitemap</li>
       </div>
     </div>
 
     <div class="bottom">
       <img src="./assets/images/Logo-Mark.svg" alt="logo">
-      <p>© 2077 Untitled UI. All rights reserved.</p>
+      <p>© 2024 Layan. All rights reserved.</p>
     </div>
   </footer>
 </body>
+<script src="js.js"></script>
+
 </html>

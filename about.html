@@ -7,11 +7,22 @@
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body style="background-color: white;">
+  <div class="mobile-nav" id="mobileNav">
+    <a href="about.html">
+      <li class="link">A Propos</li>
+    </a>
+    <a href="services.html">
+      <li class="link">Nos Services</li>
+    </a>
+    <a href="services.html#faq">
+      <li class="link">FAQ</li>
+    </a> 
+  </div>
   <div class="nav-container">
     <nav>
       <div class="logo-container">
         <a href="index.html">
-          <img src="./assets/images/Logo-Mark.svg" alt="logo Layan" />
+          <img src="./assets/images/Logo-Mark.svg" alt="logo Layan" class="logo-nav" />
         </a>
       </div>
       <div class="nav-links">
@@ -23,13 +34,15 @@
         </a>
         <a href="services.html#faq">
           <li class="link">FAQ</li>
-        </a>      
+        </a>  
       </div>
-      <a href="contact.html">
+      <a href="contact.html" class="cta">
         <button class="btn-primary">
           Demandez un devis
         </button>
       </a>
+
+      <img src="./assets/images/icons/hamburger.png" alt="hamburger " class="menu-icon" id="menuIcon">
     </nav>
   </div>
 
@@ -46,12 +59,15 @@
     </div>
 
     <div class="mission">
-      <h2>Notre Mission</h2>
-      <div class="text">
-        <p>Layan a pour mission de révolutionner la gestion de propriété au Maroc en proposant une plateforme à la fois simple et sécurisée.</p>
-        
-        <p>Nous croyons que la gestion d’une copropriété peut être grandement améliorée par la technologie, offrant ainsi une expérience sans précédent en termes de facilité et d’efficacité pour les syndics et les résidents.</p>
+      <div class="left">
+        <h2>Notre Mission</h2>
+        <div class="text">
+          <p>Layan a pour mission de révolutionner la gestion de propriété au Maroc en proposant une plateforme à la fois simple et sécurisée.</p>
+          
+          <p>Nous croyons que la gestion d’une copropriété peut être grandement améliorée par la technologie, offrant ainsi une expérience sans précédent en termes de facilité et d’efficacité pour les syndics et les résidents.</p>
+        </div>
       </div>
+      <img src="./assets/images/mission-illu.jpg" alt="mission" class="mission-illu">
     </div>
 
     <div class="values">
@@ -129,12 +145,12 @@
     </div>
   </section>
 
-  <div class="download">
+  <div class="download" style="padding-top: 0;">
     <img src="./assets/images/download-gardient.svg" alt="gradient" class="gradient">
     <img src="./assets/images/Logo-Mark.svg" alt="logo" class="logo">
     <h1>Rejoignez Notre Mission</h1>
     <p>Nous sommes toujours à la recherche de talents passionnés pour rejoindre notre équipe. Si vous partagez nos valeurs et souhaitez contribuer à améliorer la gestion de propriétés au Maroc, consultez nos offres d'emploi ou contactez-nous pour en savoir plus.</p>
-    <div class="stores">
+    <div class="stores stores-about">
       <button class="btn-primary">Contactez-Nous</button>
       <button class="btn-outlined">Contactez-Nous</button>
     </div>
@@ -152,25 +168,34 @@
         </div>
       </div>
       <div class="links">
-        <p>Product</p>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
+        <p>Quick Links</p>
+          <a href="services.html">
+            <li>Nos services</li>
+          </a>
+          <a href="about.html">
+            <li>A propos</li>
+          </a>
+          <a href="contact.html">
+            <li>contact</li>
+          </a>
+          <a href="services.html#faq">
+            <li>FAQs</li>
+          </a>
       </div>
       <div class="links">
-        <p>Product</p>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
+        <p>Legal</p>
+          <li>Terms and policies</li>
+          <li>Privacy policy</li>
+          <li>Sitemap</li>
       </div>
     </div>
 
     <div class="bottom">
       <img src="./assets/images/Logo-Mark.svg" alt="logo">
-      <p>© 2077 Untitled UI. All rights reserved.</p>
+      <p>© 2024 Layan. All rights reserved.</p>
     </div>
   </footer>
 </body>
+<script src="js.js"></script>
+
 </html>

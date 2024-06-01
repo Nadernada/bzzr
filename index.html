@@ -5,14 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Layan</title>
   <link rel="stylesheet" href="./css/styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="about.html">
+      <li class="link">A Propos</li>
+    </a>
+    <a href="services.html">
+      <li class="link">Nos Services</li>
+    </a>
+    <a href="services.html#faq">
+      <li class="link">FAQ</li>
+    </a> 
+  </div>
   <div class="nav-container">
     <nav>
       <div class="logo-container">
         <a href="index.html">
-          <img src="./assets/images/Logo-Mark.svg" alt="logo Layan" />
-        </a>      </div>
+          <img src="./assets/images/Logo-Mark.svg" alt="logo Layan" class="logo-nav" />
+        </a>
+      </div>
       <div class="nav-links">
         <a href="about.html">
           <li class="link">A Propos</li>
@@ -24,18 +40,20 @@
           <li class="link">FAQ</li>
         </a>  
       </div>
-      <a href="contact.html">
+      <a href="contact.html" class="cta">
         <button class="btn-primary">
           Demandez un devis
         </button>
       </a>
+
+      <img src="./assets/images/icons/hamburger.png" alt="hamburger " class="menu-icon" id="menuIcon">
     </nav>
   </div>
 
   <img src="./assets/images/Radial Gradient.svg" alt="" class="top-gradient">
-  <div class="hero-section">
-    <!-- <div class="lines"></div> -->
-    <!-- <img src="./assets/images/gradient lines.svg" alt="" class="lines"> -->
+  <div class="hero-section fade-up">
+    <div class="lines"></div>
+    <!-- <img src="./assets/images/gradient lines (1).svg" alt="" class="lines"> -->
     <h1>Bienvenue sur Layan</h1>
     <h2>Votre communauté à portée de main</h2>
     <img class="finances-img" src="./assets/images/finances.png" alt="management de finances" />
@@ -50,10 +68,10 @@
   <div class="mockup-section">
     <img class="hero-phone-mockup" src="./assets/images/hero-phone-mockup.png" alt="">
     <div class="top-half">
-      <p class="left">
+      <p class="left fade-up" style="animation-delay: 0.2s;">
         Chez Layan, nous croyons que la gestion de votre communauté résidentielle devrait être simple, intuitive et sécurisée.
       </p>
-      <p class="right">
+      <p class="right fade-up" style="animation-delay: 0.25s;">
         Layan est l'application parfaite pour les syndics et les résidents, offrant des outils puissants pour améliorer la communication, la sécurité et la gestion quotidienne de votre copropriété.
       </p>
     </div>
@@ -69,7 +87,7 @@
     <div class="top-half">
       <img src="./assets/images/pages-mockup.png" alt="pages" class="pages-mockup-img">
       <div class="right">
-        <div class="card">
+        <div class="card animate__animated  animate__backInUp">
           <div class="head">
             <h4>Gestion Intuitive des Tâches</h4>
             <img src="./assets/images/tasks-icon.svg" alt="tasks" class="icon">
@@ -83,7 +101,7 @@
           </div>
           <p>Nous avons rigoureusement sécurisé notre application afin de garantir la protection et la confidentialité des données personnelles de nos utilisateurs.</p>
         </div>
-        <div class="card">
+        <div class="card fade-up">
           <div class="head">
             <h4>Communication Améliorée</h4>
             <img src="./assets/images/icons/community-icon.svg" alt="tasks" class="icon">
@@ -140,56 +158,75 @@
   <div class="keys">
     <h2>Fonctionnalités Clés</h2>
     <div style="position: relative; padding-top: 4rem;">
-      <img src="./assets/images/main.png" alt="" >
+      <img src="./assets/images/main.png" alt="" class="main-img">
       <img src="./assets/images/icons/tasks-circle-icon.svg" alt="" class="icon tasks">
       <img src="./assets/images/icons/settings-icon.svg" alt="" class="icon setting">
       <img src="./assets/images/icons/avatar-icon.svg" alt="" class="icon avatar">
       <img src="./assets/images/icons/market-icon.svg" alt="" class="icon market">
 
-    <div class="top-left">
-      <div class="text">
+      <div class="top-left">
+        <div class="text">
+          <h3 style="color: #7E49FF;">Réservations des Espaces Communs</h3>
+          <p>Simplifiez la réservation des espaces communs avec notre système de réservation en ligne.</p>
+        </div>
+        <img src="./assets/images/arrow-br.svg" alt="">
+      </div>
+
+      <div class="bottom-left">
+        <div class="text">
+          <h3 style="color: #154DD7;">Gestion des Incidents</h3>
+          <p>Reportez et suivez les incidents au sein de la copropriété sans effort.</p>
+          <img src="./assets/images/arrow-tr.svg" alt="">
+        </div>
+        <img src="./assets/images/incidents-img.png" alt="">
+      </div>
+
+      <div class="top-right">
+        <div style="display: flex; flex-direction: column; align-items: flex-end; row-gap: 2rem;">
+          <img src="./assets/images/arrow-bl.svg" alt="" width="70px">
+          <img src="./assets/images/dashboard-img.png" alt="">
+        </div>
+        <div class="text">
+          <h3 style="color: #154DD7;">Dashboard Personnalisé</h3>
+          <p>Accédez rapidement à toutes les informations importantes dès votre connexion</p>
+        </div>
+      </div>
+
+      <div class="bottom-right">
+        <div style="display: flex; flex-direction: column; align-items: flex-end;">
+
+          <img src="./assets/images/payment.png" alt="">
+          <img src="./assets/images/arrow-tl.svg" alt="" width="70px">
+        </div>
+        <div class="text">
+          <h3 style="color: #7E49FF;">Module de Paiement</h3>
+          <p>Gérez les cotisations et les paiements de manière sécurisée et transparente.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="text-mobile">
         <h3 style="color: #7E49FF;">Réservations des Espaces Communs</h3>
         <p>Simplifiez la réservation des espaces communs avec notre système de réservation en ligne.</p>
       </div>
-      <img src="./assets/images/arrow-br.svg" alt="">
-    </div>
-
-    <div class="bottom-left">
-      <div class="text">
+      <div class="text-mobile">
         <h3 style="color: #154DD7;">Gestion des Incidents</h3>
         <p>Reportez et suivez les incidents au sein de la copropriété sans effort.</p>
-        <img src="./assets/images/arrow-tr.svg" alt="">
       </div>
-      <img src="./assets/images/incidents-img.png" alt="">
-    </div>
-
-    <div class="top-right">
-      <div style="display: flex; flex-direction: column; align-items: flex-end; row-gap: 2rem;">
-        <img src="./assets/images/arrow-bl.svg" alt="" width="70px">
-        <img src="./assets/images/dashboard-img.png" alt="">
-      </div>
-      <div class="text">
+      <div class="text-mobile">
         <h3 style="color: #154DD7;">Dashboard Personnalisé</h3>
         <p>Accédez rapidement à toutes les informations importantes dès votre connexion</p>
       </div>
-    </div>
-
-    <div class="bottom-right">
-      <div style="display: flex; flex-direction: column; align-items: flex-end;">
-
-        <img src="./assets/images/payment.png" alt="">
-        <img src="./assets/images/arrow-tl.svg" alt="" width="70px">
-      </div>
-      <div class="text">
+      <div class="text-mobile">
         <h3 style="color: #7E49FF;">Module de Paiement</h3>
         <p>Gérez les cotisations et les paiements de manière sécurisée et transparente.</p>
       </div>
     </div>
-  </div>
 
   </div>
 
-  <div class="testimonials">
+  <div class="testimonials test-home">
     <h2>Ce Que Nos Utilisateurs Disent de Nous</h2>
     <div class="cards">
       <div class="card card-1">
@@ -232,25 +269,36 @@
         </div>
       </div>
       <div class="links">
-        <p>Product</p>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
+        <p>Quick Links</p>
+          <a href="services.html">
+            <li>Nos services</li>
+          </a>
+          <a href="about.html">
+            <li>A propos</li>
+          </a>
+          <a href="contact.html">
+            <li>contact</li>
+          </a>
+          <a href="services.html#faq">
+            <li>FAQs</li>
+          </a>
       </div>
       <div class="links">
-        <p>Product</p>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
+        <p>Legal</p>
+          <li>Terms and policies</li>
+          <li>Privacy policy</li>
+          <li>Sitemap</li>
       </div>
     </div>
 
     <div class="bottom">
       <img src="./assets/images/Logo-Mark.svg" alt="logo">
-      <p>© 2077 Untitled UI. All rights reserved.</p>
+      <p>© 2024 Layan. All rights reserved.</p>
     </div>
   </footer>
+
+
+  
 </body>
+<script src="js.js"></script>
 </html>

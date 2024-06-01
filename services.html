@@ -7,11 +7,22 @@
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="about.html">
+      <li class="link">A Propos</li>
+    </a>
+    <a href="services.html">
+      <li class="link">Nos Services</li>
+    </a>
+    <a href="services.html#faq">
+      <li class="link">FAQ</li>
+    </a> 
+  </div>
   <div class="nav-container">
     <nav>
       <div class="logo-container">
         <a href="index.html">
-          <img src="./assets/images/Logo-Mark.svg" alt="logo Layan" />
+          <img src="./assets/images/Logo-Mark.svg" alt="logo Layan" class="logo-nav" />
         </a>
       </div>
       <div class="nav-links">
@@ -21,15 +32,17 @@
         <a href="services.html">
           <li class="link">Nos Services</li>
         </a>
-        <a href="#faq">
+        <a href="services.html#faq">
           <li class="link">FAQ</li>
-        </a>
+        </a>  
       </div>
-      <a href="contact.html">
+      <a href="contact.html" class="cta">
         <button class="btn-primary">
           Demandez un devis
         </button>
       </a>
+
+      <img src="./assets/images/icons/hamburger.png" alt="hamburger " class="menu-icon" id="menuIcon">
     </nav>
   </div>
 
@@ -104,26 +117,39 @@
 
   <section class="two-columns">
     <div class="third">
-      <div class="top">
-        <div class="left">
-          <img src="./assets/images/3.png" alt="3">
+      <div class="lefto">
+
+        <div class="top">
+          <div class="left">
+            <img src="./assets/images/3.png" alt="3">
+          </div>
+          <div class="right">
+            <img src="./assets/images/co-op-img.png" alt="co">
+            <h4 class="title-text">Situation du<br />Copropriétaire</h4>
+          </div>
         </div>
-        <div class="right">
-          <img src="./assets/images/co-op-img.png" alt="co">
-          <h4 class="title-text">Situation du<br />Copropriétaire</h4>
-        </div>
+        <p>Obtenez une vue d'ensemble claire de votre situation financière et administrative au sein de la copropriété avec cette fonctionnalité. Elle fournit un accès rapide à toutes vos informations essentielles, vous permettant de rester informé et préparé pour toutes les discussions ou décisions.</p>
       </div>
-      <p>Obtenez une vue d'ensemble claire de votre situation financière et administrative au sein de la copropriété avec cette fonctionnalité. Elle fournit un accès rapide à toutes vos informations essentielles, vous permettant de rester informé et préparé pour toutes les discussions ou décisions.</p>
+      <img src="./assets/images/co-op.png" alt="" class="co-op-img">
+
     </div>
 
     <div class="fourth">
-      <div class="top">
-        <div class="left">
-          <h4 class="title-text">Vote aux Assemblées<br/>Générales à Distance</h4>
-          <img src="./assets/images/4.png" alt="3">
-        </div>
+      <div class="first-half">
+        <img src="./assets/images/GA-1.png" alt="" class="ga-1" />
+        <img src="./assets/images/GA-2.png" alt="" class="ga-2" />
+        <img src="./assets/images/GA-3.png" alt="" class="ga-3" />
       </div>
-      <p>Ne manquez plus jamais une assemblée générale avec la possibilité de voter à distance. Cette fonctionnalité vous permet de participer activement aux décisions importantes de votre copropriété, tout cela depuis le confort de votre domicile via votre smartphone.</p>
+      <div class="half">
+
+        <div class="top">
+          <div class="left">
+            <h4 class="title-text">Vote aux Assemblées<br/>Générales à Distance</h4>
+            <img src="./assets/images/4.png" alt="3">
+          </div>
+        </div>
+        <p>Ne manquez plus jamais une assemblée générale avec la possibilité de voter à distance. Cette fonctionnalité vous permet de participer activement aux décisions importantes de votre copropriété, tout cela depuis le confort de votre domicile via votre smartphone.</p>
+      </div>
     </div>
   </section>
 
@@ -159,14 +185,14 @@
         <p class="name">Sarah El Ghazi</p>
         <p class="job-title">Résidente à Casablanca</p>
       </div>
-      <div class="card card-2" style="transform: translateY(-7rem);">
+      <div class="card card-2 no-transform" style="transform: translateY(-7rem);">
         <img src="./assets/images/person2.png" alt="person" class="person-right">
         <img src="./assets/images/icons/quote.svg" alt="quote" class="quote-icon">
         <p class="text">Layan a transformé la façon dont nous gérons notre complexe résidentiel. Les outils de vote à distance et de gestion des paiements nous ont permis d'améliorer notre efficacité et de réduire les délais de traitement. C'est un véritable changement de jeu pour nous.</p>
         <p class="name">Omar Kabbaj</p>
         <p class="job-title">Président du syndic</p>
       </div>
-      <div class="card card-1" style="transform: translate(5rem, -10rem);">
+      <div class="card card-1 no-transform" style="transform: translate(5rem, -10rem);">
         <img src="./assets/images/person3.png" alt="person" class="person-left">
         <img src="./assets/images/icons/quote.svg" alt="quote" class="quote-icon">
         <p class="text">J'étais sceptique au début, mais après avoir utilisé Layan pour quelques mois, je suis totalement convaincue. La fonctionnalité de communauté a renforcé l'esprit entre nous les résidents, et les services disponibles à portée de main sont juste excellents.</p>
@@ -270,25 +296,34 @@
         </div>
       </div>
       <div class="links">
-        <p>Product</p>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
+        <p>Quick Links</p>
+          <a href="services.html">
+            <li>Nos services</li>
+          </a>
+          <a href="about.html">
+            <li>A propos</li>
+          </a>
+          <a href="contact.html">
+            <li>contact</li>
+          </a>
+          <a href="services.html#faq">
+            <li>FAQs</li>
+          </a>
       </div>
       <div class="links">
-        <p>Product</p>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
-          <li>Overview</li>
+        <p>Legal</p>
+          <li>Terms and policies</li>
+          <li>Privacy policy</li>
+          <li>Sitemap</li>
       </div>
     </div>
 
     <div class="bottom">
       <img src="./assets/images/Logo-Mark.svg" alt="logo">
-      <p>© 2077 Untitled UI. All rights reserved.</p>
+      <p>© 2024 Layan. All rights reserved.</p>
     </div>
   </footer>
 </body>
+<script src="js.js"></script>
+
 </html>
