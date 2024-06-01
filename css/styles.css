@@ -1318,8 +1318,8 @@ h4 {
 .mobile-nav {
   position: fixed;
   top: 0;
-  right: 0;
-  width: 100%;
+  left: 0;
+  width: 100vw;
   height: 100vh;
   justify-content: center;
   align-items: center;
