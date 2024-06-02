@@ -2359,7 +2359,7 @@ section .team .left, section .team .right {
 
 @media only screen and (max-width: 600px) {
 
-  .keys .main-img {
+  .keys .main-img ,.pages-mockup-img{
     height: auto;
   }
 
