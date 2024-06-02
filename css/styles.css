@@ -2363,6 +2363,10 @@ section .team .left, section .team .right {
     height: auto;
   }
 
+  .pages-mockup-img {
+    width: 100%;
+  }
+
   
 .two-columns .fourth {
   display: flex;
