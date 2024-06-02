@@ -2357,7 +2357,11 @@ section .team .left, section .team .right {
 
 @media only screen and (min-width: 1300px){
   .test-home {
-    height: 83vh !important;
+    height: fit-content !important;
+  }
+
+  .test-home .card-2{
+    margin-top: 15rem;
   }
 
   .testimonials .cards .card .person-left {
