@@ -2355,6 +2355,16 @@ section .team .left, section .team .right {
 
 }
 
+@media only screen and (min-width: 1300px){
+  .test-home {
+    height: 83vh !important;
+  }
+
+  .testimonials .cards .card .person-left {
+    right: -15% !important;
+}
+}
+
 
 
 @media only screen and (max-width: 600px) {
