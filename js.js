@@ -1,8 +1,15 @@
 // Function to handle scroll animation with delay
 document.addEventListener('DOMContentLoaded', () => {
+const home = document.querySelector('.fade-up-all');
+
   document.getElementById('menuIcon').addEventListener('click', function() {
     var mobileNav = document.getElementById('mobileNav');
-    mobileNav.classList.toggle('visible'); // Toggle the 'show' class
+    mobileNav.classList.toggle('visible');
+    if(mobileNav.classList.contains('visible')) {
+      home.style.display = 'none'
+    } else {
+      home.style.display = 'block'
+    };
   });
 
 const sections = document.querySelectorAll('.fade-up');
@@ -43,19 +50,40 @@ window.addEventListener('scroll', checkPosition);
 
 
 
+function isMobileDevice() {
+  return window.innerWidth < 425;
+}
+
+// Function to set the appropriate video source based on the device
+function setVideoSource() {
+  var videoElement = document.getElementById('home-video');
+  if (isMobileDevice()) {
+    // Set the source for mobile devices
+    videoElement.src = './assets/images/mobile-video.mkv';
+  } else {
+    // Set the source for desktop devices
+    videoElement.src = './assets/images/desktop-video.mp4';
+  }
+  // Load the new source
+  videoElement.load();
+}
+
+// Call the function when the page loads
+window.onload = function() {
+  setVideoSource();
+};
 
 
 
-
-const home = document.querySelector('.fade-up-all');
 const hero = document.querySelectorAll('.fade-late');
+const videoContainer = document.querySelector('.video');
 const homeVideo = document.getElementById('home-video');
 const body = document.getElementsByTagName('body');
 home.style.display = 'none';
 homeVideo.addEventListener('ended', () => {
   body.style
   homeVideo.style.transform = 'translateY(-110vh)';
-  homeVideo.style.display = 'none';
+  videoContainer.style.display = 'none';
   home.style.display = 'block';
   home.style.transform = 'translateY(0)';
   home.style.opacity = 1;
