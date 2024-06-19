@@ -59,7 +59,7 @@ function setVideoSource() {
   var videoElement = document.getElementById('home-video');
   if (isMobileDevice()) {
     // Set the source for mobile devices
-    videoElement.src = './assets/images/mobile-video.mkv';
+    videoElement.src = './assets/images/mobile-video.mp4';
   } else {
     // Set the source for desktop devices
     videoElement.src = './assets/images/desktop-video.mp4';
