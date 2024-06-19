@@ -77,9 +77,12 @@ window.onload = function() {
 
 const hero = document.querySelectorAll('.fade-late');
 const videoContainer = document.querySelector('.video');
+const nav = document.querySelector('.navigation');
+const navM = document.querySelector('.mobile-nav');
 const homeVideo = document.getElementById('home-video');
 const body = document.getElementsByTagName('body');
 home.style.display = 'none';
+nav.style.display = 'none';
 homeVideo.addEventListener('ended', () => {
   body.style
   homeVideo.style.transform = 'translateY(-110vh)';
@@ -87,6 +90,9 @@ homeVideo.addEventListener('ended', () => {
   home.style.display = 'block';
   home.style.transform = 'translateY(0)';
   home.style.opacity = 1;
+  nav.style.display = 'block';
+  nav.style.transform = 'translateY(0)';
+  nav.style.opacity = 1;
   hero.forEach((item) => item.classList.add('fade-up'))
 })
 
