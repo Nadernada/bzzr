@@ -1,3 +1,12 @@
+/*
+Theme Name: Layan
+Theme URI: layan.com
+Description: syndic web application
+Version: 1.0
+Author: Nada Nadir
+Author URI: #
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
@@ -56,8 +65,8 @@ body {
 
 * {
   transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  transition-timing-function: ease;
+  transition-duration: .5s;
 }
 
 
@@ -178,7 +187,7 @@ nav .menu-icon {
   position: absolute;
   bottom: -63%;
   left: 2%;
-  background: url(../assets/images/gradient\ lines\ \(1\).svg) center no-repeat;
+  background: url(/assets/images/gradient\ lines\ \(1\).svg) center no-repeat;
   background-blend-mode: multiply;
   width: 100%;
   height: 100%;
@@ -330,6 +339,10 @@ nav .menu-icon {
   border-radius: var(--br-md);
 }
 
+.speciality-section .top-half .right .card p {
+  transition: all .5s ease;
+}
+
 .speciality-section .top-half .right .card:hover {
   background-color: var(--primary);
   color: var(--white);
@@ -443,7 +456,7 @@ nav .menu-icon {
   align-items: center;
   padding-top: 5rem;
   position: relative;
-  background: url(../assets/images/keys-shape.svg) top no-repeat;
+  background: url(/assets/images/keys-shape.svg) top no-repeat;
   overflow: hidden;
 }
 
@@ -749,21 +762,22 @@ footer .bottom p {
   margin-top: 2rem;
 }
 
-.contact-container .left-side form label {
+.contact-container .left-side .wpcf7 label {
   margin-top: 1rem;
-  margin-bottom: .5rem;
 }
 
-.contact-container .left-side form input {
+.contact-container .left-side .wpcf7 input {
   height: 50px;
 }
 
-.contact-container .left-side form input, textarea {
+.contact-container .left-side .wpcf7 textarea, .wpcf7 input {
   border-radius: var(--par);
   border: 1px #D0D5DD solid;
   background-color: #0a31950e;
   outline: none;
   padding-left: 1rem;
+  width: 100%;
+  margin-bottom: .5rem;
 }
 
 .contact-container .left-side form .name {
@@ -779,8 +793,23 @@ footer .bottom p {
   width: 50%;
 }
 
-.contact-container .left-side .btn-primary {
+.contact-container .left-side .wpcf7 input[type="submit"] {
   margin-top: 2rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: var(--br-md);
+  font-weight: bold;
+  font-size: var(--button);
+  font-family: inherit;
+  border: 3px solid var(--primary);
+  cursor: pointer;
+}
+
+.contact-container .left-side .wpcf7 input[type="submit"]:hover {
+  border: 3px solid var(--primary);
+  background-color: transparent;
+  color: var(--primary);
 }
 
 
@@ -958,6 +987,14 @@ section .team .right .cards .card .title h5 {
 
 
 /* Services */
+
+.mobile-version {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
 
 .services-hero {
   padding: 8rem 24rem;
@@ -1411,6 +1448,7 @@ nav .menu-icon {
 
 .top-gradient, .gradient {
   width: 100%;
+  opacity: 0.5;
 }
 
 /* Hero section */
@@ -1856,8 +1894,45 @@ section .team .right .cards .card .title h5 {
 
 /* Services */
 
+.desktop {
+  display: none;
+}
+
+.mobile-version {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-version .section {
+  padding: 2rem;
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-version .section h4 {
+  color: blueviolet;
+  font-size: 1.15rem;
+}
+
+.mobile-version .image {
+  width: 100%;
+  object-fit: contain;
+  justify-content: center;
+  display: flex;
+}
+
+.mobile-version .image img {
+  max-width: 100%;
+  max-height: 321px;
+}
+
 .services-hero {
   padding: 3rem 1rem;
+}
+
+.services-hero h2 {
+  font-size: 1.25rem !important;
 }
 
 .services .first .top {
@@ -1947,6 +2022,12 @@ section .team .right .cards .card .title h5 {
 
 .two-columns .fourth {
   padding-bottom: 4rem;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+.two-columns .third {
+  row-gap: 1rem;
 }
 
 .two-columns .third, .two-columns .fourth {
@@ -1957,8 +2038,38 @@ section .team .right .cards .card .title h5 {
   width: 75%;
 }
 
+.two-columns .third .lefto {
+  order: 1 !important;
+}
+
+.co-op-img {
+  order: 2 !important;
+}
+
+.two-columns .fourth .half {
+  order: 1;
+}
+
+.two-columns .fourth .first-half {
+  order: 2;
+  width: 84%;
+
+}
+
+.two-columns .fourth .top {
+  justify-content: flex-start;
+}
+
 .two-columns .fourth .top .left {
   width: 100%;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.two-columns .fourth .top .left .title-text {
+  position: relative;
+  order: 2;
+  right: auto;
 }
 
 .two-columns .fourth .top .left img {
@@ -1967,6 +2078,16 @@ section .team .right .cards .card .title h5 {
 
 .two-columns .third .top .right img {
   width: 100%;
+}
+
+.padded-white-section .second {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.mobile-only img {
+  width: 20%;
+
 }
 
 .padded-white-section .second .title .community {
@@ -1978,7 +2099,7 @@ section .team .right .cards .card .title h5 {
 }
 
 .padded-white-section .cards-img img {
-  width: 100%;
+  width: 56%;
   height: fit-content;
 }
 
@@ -2344,12 +2465,17 @@ section .team .left .team-img {
   position: relative;
 }
 
+.services .first {
+  padding-right: 2rem;
+    padding-left: 2rem;
+}
+
 .services .first .top .left p {
   width: 120%;
 }
 
 .services .first .top .right, .services .first .top .right img {
-  width: 120%;
+  width: 100%;
 }
 
 .ga-1, .ga-2, .ga-3 {
