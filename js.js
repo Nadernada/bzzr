@@ -84,7 +84,7 @@ const body = document.getElementsByTagName('body');
 home.style.display = 'none';
 nav.style.display = 'none';
 homeVideo.addEventListener('ended', () => {
-  body.style
+  // body.style
   homeVideo.style.transform = 'translateY(-110vh)';
   videoContainer.style.display = 'none';
   home.style.display = 'block';
