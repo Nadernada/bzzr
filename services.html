@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layan</title>
+  <title>Viven</title>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
@@ -22,7 +24,7 @@
     <nav>
       <div class="logo-container">
         <a href="index.html">
-          <img src="./assets/images/Logo-Mark.svg" alt="logo Layan" class="logo-nav" />
+          <img src="./assets/images/Logo-Mark.svg" alt="logo Viven" class="logo-nav" />
         </a>
       </div>
       <div class="nav-links">
@@ -50,47 +52,40 @@
 
   <div class="services-hero fade-up-first">
     <h2>Bienvenue sur notre page des fonctionnalités</h2>
-    <p>où nous vous guidons à travers les divers aspects de notre application "Layan" qui ont été soigneusement conçus pour améliorer et simplifier la gestion de votre copropriété</p>
+    <p>où nous vous guidons à travers les divers aspects de notre application "Viven" qui ont été soigneusement conçus pour améliorer et simplifier la gestion de votre copropriété</p>
+    <img src="./assets/images/services-hero.png" alt="services" class="services-hero-img">
   </div>
   
   <div class="desktop">
   
   <section class="services">
-    <div class="first fade-up-second">
+    <div class="first fade-up">
       <div class="top">
         <div class="left">
           <div class="title">
             <img src="./assets/images/1.png" alt="number" class="number-1">
-            <h4 class="title-text">Demande de Gestion des Problèmes au Syndic</h4>
+            <h4 class="title-text">services de syndicat</h4>
           </div>
-          <p>Cette fonctionnalité centrale permet aux résidents de signaler rapidement et efficacement tout problème relatif à leur unité ou aux espaces communs directement au syndic.</p>
-          <p>Grâce à une interface intuitive, vous pouvez choisir parmi une liste exhaustive de problèmes possibles, garantissant que rien n'est négligé. Voici quelques exemples de catégories de problèmes que vous pouvez reporter :</p>
+          <p id="problem-description">Cette fonctionnalité centrale permet aux résidents de signaler rapidement et efficacement tout problème relatif à leur unité ou aux espaces communs directement au syndic. Grâce à une interface intuitive, vous pouvez choisir parmi une liste exhaustive de problèmes possibles, garantissant que rien n\'est négligé.</p>
+          <!-- <p>Grâce à une interface intuitive, vous pouvez choisir parmi une liste exhaustive de problèmes possibles, garantissant que rien n'est négligé. Voici quelques exemples de catégories de problèmes que vous pouvez reporter :</p> -->
         </div>
         <div class="right">
-          <img src="./assets/images/alerts-img.png" alt="alerts">
+          <img src="./assets/images/alerts-img.png" alt="alerts" id="services-img-hover">
         </div>
       </div>
   
       <div class="bottom">
-        <div class="card invert-hover hover-scale">
+        <div class="card invert-hover hover-scale hover-active" onmouseover="changeDescription('problem-description', 'Cette fonctionnalité centrale permet aux résidents de signaler rapidement et efficacement tout problème relatif à leur unité ou aux espaces communs directement au syndic. Grâce à une interface intuitive, vous pouvez choisir parmi une liste exhaustive de problèmes possibles, garantissant que rien n\'est négligé.', './assets/images/alerts-img.png')">
           <img src="./assets/images/icons/community-icon.svg" alt="chat">
-          <h5>Plomberie et Égouts</h5>
+          <h5>Gestion des Problèmes</h5>
         </div>
-        <div class="card invert-hover hover-scale">
+        <div class="card invert-hover hover-scale" onmouseover="changeDescription('problem-description', 'Ne manquez plus jamais une assemblée générale avec la possibilité de voter à distance. Cette fonctionnalité vous permet de participer activement aux décisions importantes de votre copropriété, tout cela depuis le confort de votre domicile via votre smartphone.', './assets/images/ga-group.png')">
           <img src="./assets/images/icons/building-icon.svg" alt="chat">
-          <h5>Odeur</h5>
+          <h5>Vote aux Assemblées Générales à Distance</h5>
         </div>
-        <div class="card invert-hover hover-scale">
+        <div class="card invert-hover hover-scale" onmouseover="changeDescription('problem-description', 'Viven offre un accès à un large éventail de services pour faciliter votre quotidien. Réservez des services directement via l\'app, qu\'il s\'agisse de: Maintenance domestique (Nettoyage, Plomberie, Électricité, Bien-être (Massages, Yoga), Services médicaux à domicile, Entretien automobile, et plus. Chaque service est conçu pour apporter commodité et qualité à votre porte, simplifiant la gestion quotidienne de votre vie résidentielle.', './assets/images/services-group.png')">
           <img src="./assets/images/icons/tasks-icon.svg" alt="chat">
-          <h5>Nettoyage</h5>
-        </div>
-        <div class="card invert-hover hover-scale">
-          <img src="./assets/images/icons/progress-icon.svg" alt="chat">
-          <h5>Électricité</h5>
-        </div>
-        <div class="card invert-hover hover-scale">
-          <img src="./assets/images/icons/security-icon.svg" alt="chat">
-          <h5>Sécurité</h5>
+          <h5>Facilités Quotidiennes Simplifiées</h5>
         </div>
       </div>
     </div>
@@ -98,7 +93,7 @@
   
   <section class="two-columns">
   
-    <div class="fourth fade-up">
+    <!-- <div class="fourth fade-up">
       <div class="first-half">
         <img src="./assets/images/GA-1.png" alt="" class="ga-1" />
         <img src="./assets/images/GA-2.png" alt="" class="ga-2" />
@@ -108,19 +103,19 @@
   
         <div class="top">
           <div class="left">
-            <h4 class="title-text">Vote aux Assemblées<br/>Générales à Distance</h4>
+            <h4 class="title-text">Gestion de mon bien</h4>
             <img src="./assets/images/2.png" alt="3">
           </div>
         </div>
         <p>Ne manquez plus jamais une assemblée générale avec la possibilité de voter à distance. Cette fonctionnalité vous permet de participer activement aux décisions importantes de votre copropriété, tout cela depuis le confort de votre domicile via votre smartphone.</p>
       </div>
-    </div>
+    </div> -->
     <div class="third fade-up">
       <div class="lefto">
   
         <div class="top">
           <div class="left">
-            <img src="./assets/images/3.png" alt="3">
+            <img src="./assets/images/2.png" alt="3">
           </div>
           <div class="right">
             <img src="./assets/images/co-op-img.png" alt="co">
@@ -142,7 +137,7 @@
       <img src="./assets/images/line-doodle-img.png" alt="doodle" class="line-doodle">
       <div class="cards-img">
         <div class="mobile-only">
-          <img src="./assets/images/4.png" alt="number" class="number-1">
+          <img src="./assets/images/3.png" alt="number" class="number-1">
           <h4 class="title-text">Paiement</h4>
         </div>
         <img src="./assets/images/debt-cards-img.png" alt="cards">
@@ -150,12 +145,12 @@
   
       <div class="text">
         <p>
-          Layan rend les transactions financières sans stress grâce à sa fonctionnalité de paiement sécurisé. Les copropriétaires peuvent facilement régler leurs charges de copropriété et autres dépenses directement depuis leur smartphone, assurant une gestion financière transparente et sans effort.
+          Viven rend les transactions financières sans stress grâce à sa fonctionnalité de paiement sécurisé. Les copropriétaires peuvent facilement régler leurs charges de copropriété et autres dépenses directement depuis leur smartphone, assurant une gestion financière transparente et sans effort.
         </p>
       </div>
   
       <div class="title">
-        <img src="./assets/images/4.png" alt="number" class="number-1">
+        <img src="./assets/images/3.png" alt="number" class="number-1">
         <h4 class="title-text">Paiement</h4>
       </div>
   
@@ -165,11 +160,11 @@
   <section class="padded-white-section no-top-padding" style="padding-bottom: 0 !important;">
     <div class="second fade-up">
     <div class="mobile-only">
-          <img src="./assets/images/5.png" alt="number" class="number-1">
+          <img src="./assets/images/4.png" alt="number" class="number-1">
           <h4 class="title-text community">Communauté</h4>
         </div>
       <div class="title">
-        <img src="./assets/images/5.png" alt="number" class="number-1">
+        <img src="./assets/images/4.png" alt="number" class="number-1">
         <h4 class="title-text community">Communauté</h4>
       </div>
       
@@ -233,7 +228,7 @@
       <div class="content">
         <h4 class="title-text">Paiement</h4>
         <p>
-          Layan rend les transactions financières sans stress grâce à sa fonctionnalité de paiement sécurisé. Les copropriétaires peuvent facilement régler leurs charges de copropriété et autres dépenses directement depuis leur smartphone, assurant une gestion financière transparente et sans effort.
+          Viven rend les transactions financières sans stress grâce à sa fonctionnalité de paiement sécurisé. Les copropriétaires peuvent facilement régler leurs charges de copropriété et autres dépenses directement depuis leur smartphone, assurant une gestion financière transparente et sans effort.
         </p>
         </div>
       <div class="image">
@@ -262,21 +257,21 @@
       <div class="card card-1 fade-up">
         <img src="./assets/images/person1.png" alt="person" class="person-left">
         <img src="./assets/images/icons/quote.svg" alt="quote" class="quote-icon">
-        <p class="text">Grâce à Layan, la gestion de notre copropriété est devenue incroyablement simple et transparente. Les problèmes sont résolus plus rapidement qu'avant et la communication avec le syndic n'a jamais été aussi facile. Je ne saurais plus m'en passer !</p>
+        <p class="text">Grâce à Viven, la gestion de notre copropriété est devenue incroyablement simple et transparente. Les problèmes sont résolus plus rapidement qu'avant et la communication avec le syndic n'a jamais été aussi facile. Je ne saurais plus m'en passer !</p>
         <p class="name">Sarah El Ghazi</p>
         <p class="job-title">Résidente à Casablanca</p>
       </div>
       <div class="card card-2 no-transform fade-up" style="transform: translateY(-7rem);">
         <img src="./assets/images/person2.png" alt="person" class="person-right">
         <img src="./assets/images/icons/quote.svg" alt="quote" class="quote-icon">
-        <p class="text">Layan a transformé la façon dont nous gérons notre complexe résidentiel. Les outils de vote à distance et de gestion des paiements nous ont permis d'améliorer notre efficacité et de réduire les délais de traitement. C'est un véritable changement de jeu pour nous.</p>
+        <p class="text">Viven a transformé la façon dont nous gérons notre complexe résidentiel. Les outils de vote à distance et de gestion des paiements nous ont permis d'améliorer notre efficacité et de réduire les délais de traitement. C'est un véritable changement de jeu pour nous.</p>
         <p class="name">Omar Kabbaj</p>
         <p class="job-title">Président du syndic</p>
       </div>
       <div class="card card-1 no-transform fade-up" style="transform: translate(5rem, -10rem);">
         <img src="./assets/images/person3.png" alt="person" class="person-left">
         <img src="./assets/images/icons/quote.svg" alt="quote" class="quote-icon">
-        <p class="text">J'étais sceptique au début, mais après avoir utilisé Layan pour quelques mois, je suis totalement convaincue. La fonctionnalité de communauté a renforcé l'esprit entre nous les résidents, et les services disponibles à portée de main sont juste excellents.</p>
+        <p class="text">J'étais sceptique au début, mais après avoir utilisé Viven pour quelques mois, je suis totalement convaincue. La fonctionnalité de communauté a renforcé l'esprit entre nous les résidents, et les services disponibles à portée de main sont juste excellents.</p>
         <p class="name">Laila Rmiki</p>
         <p class="job-title">Copropriétaire à Marrakech</p>
       </div>
@@ -295,7 +290,7 @@
           <details class="details">
             <summary>
               <h4>
-                Comment puis-je signaler un problème via Layan?
+                Comment puis-je signaler un problème via Viven?
               </h4>
               <h4>+</h4>
             </summary>
@@ -306,11 +301,11 @@
           <details>
             <summary>
               <h4>
-                Quelles mesures de sécurité Layan utilise-t-elle?
+                Quelles mesures de sécurité Viven utilise-t-elle?
               </h4>
               <h4>+</h4>
             </summary>
-            <p>Layan prend la sécurité très au sérieux. Nous utilisons le cryptage de données de pointe et des protocoles sécurisés pour protéger toutes vos informations personnelles et financières. De plus, toutes les communications entre votre appareil et nos serveurs sont sécurisées par SSL.</p>
+            <p>Viven prend la sécurité très au sérieux. Nous utilisons le cryptage de données de pointe et des protocoles sécurisés pour protéger toutes vos informations personnelles et financières. De plus, toutes les communications entre votre appareil et nos serveurs sont sécurisées par SSL.</p>
           </details>
         </div>
       </div>
@@ -319,7 +314,7 @@
           <details>
             <summary>
               <h4>
-                Comment fonctionne le paiement des charges de copropriété sur Layan?
+                Comment fonctionne le paiement des charges de copropriété sur Viven?
               </h4>
               <h4>+</h4>
             </summary>
@@ -330,11 +325,11 @@
           <details>
             <summary>
               <h4>
-                Puis-je utiliser Layan pour voter lors des Assemblées Générales?
+                Puis-je utiliser Viven pour voter lors des Assemblées Générales?
               </h4>
               <h4>+</h4>
             </summary>
-            <p>Oui, avec Layan, vous pouvez participer et voter lors des Assemblées Générales sans être physiquement présent. Accédez à la section 'Vote aux Assemblées Générales à Distance', où vous pourrez voir les questions en cours de vote et soumettre votre choix.</p>
+            <p>Oui, avec Viven, vous pouvez participer et voter lors des Assemblées Générales sans être physiquement présent. Accédez à la section 'Vote aux Assemblées Générales à Distance', où vous pourrez voir les questions en cours de vote et soumettre votre choix.</p>
           </details>
         </div>
       </div>
@@ -343,7 +338,7 @@
           <details>
             <summary>
               <h4>
-                Comment puis-je accéder aux services proposés sur Layan?
+                Comment puis-je accéder aux services proposés sur Viven?
               </h4>
               <h4>+</h4>
             </summary>
@@ -401,10 +396,17 @@
 
     <div class="bottom">
       <img src="./assets/images/Logo-Mark.svg" alt="logo">
-      <p>© 2024 Layan. All rights reserved. Powered by <span style="color: blueviolet; font-weight: 600;">DIGLAND</span></p>
+      <p>© 2024 Viven. All rights reserved. Powered by <span style="color: blueviolet; font-weight: 600;">DIGLAND</span></p>
     </div>
   </footer>
-</body>
-<script src="js.js"></script>
+  <script>
+      // JavaScript function to change the description text
+  function changeDescription(elementId, newText, newImg) {
+    document.getElementById(elementId).textContent = newText;
+    document.getElementById('services-img-hover').srcset = newImg;
+  }
+  </script>
+  </body>
+  <script src="js.js"></script>
 
 </html>

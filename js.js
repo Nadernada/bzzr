@@ -1,3 +1,4 @@
+
 // Function to handle scroll animation with delay
 document.addEventListener('DOMContentLoaded', () => {
 const home = document.querySelector('.fade-up-all');
@@ -99,8 +100,71 @@ homeVideo.addEventListener('ended', () => {
 const gif = document.querySelector('.pages-mockup-gif');
 gif.playbackRate = 0.7;
 
-})
-// Listen for scroll events
-window.addEventListener('scroll', () => {
-  handleScrollAnimationWithDelay();
+
+// keys hover effect
+const payment = document.getElementById('payment');
+const dashboard = document.getElementById('dashboard');
+const espaces = document.getElementById('espaces');
+const gestions = document.getElementById('gestions');
+const phone = document.getElementById('main-phone');
+
+payment.addEventListener('mouseenter', function() {
+  phone.classList.remove('slide-up-animation'); // Remove animation class if already applied
+  phone.src = './assets/images/gestion-finances.png';
+  void phone.offsetWidth; // Trigger reflow to restart the animation
+  phone.classList.add('slide-up-animation'); // Add animation class to play animation
 });
+
+dashboard.addEventListener('mouseenter', function() {
+  phone.classList.remove('slide-up-animation');
+  phone.src = './assets/images/dashboard.png';
+  void phone.offsetWidth;
+  phone.classList.add('slide-up-animation');
+});
+
+espaces.addEventListener('mouseenter', function() {
+  phone.classList.remove('slide-up-animation');
+  phone.src = './assets/images/communaute.png';
+  void phone.offsetWidth;
+  phone.classList.add('slide-up-animation');
+});
+
+gestions.addEventListener('mouseenter', function() {
+  phone.classList.remove('slide-up-animation');
+  phone.src = './assets/images/services.png';
+  void phone.offsetWidth;
+  phone.classList.add('slide-up-animation');
+});
+
+
+
+})
+// // Listen for scroll events
+// window.addEventListener('scroll', () => {
+//   handleScrollAnimationWithDelay();
+// });
+
+
+// $(document).ready(function(){
+//   var slider = $('.services-test').slick({
+//       autoplay: true,
+//       autoplaySpeed: 2000,
+//   });
+//   $('#nextButton').click(function(){
+//       slider.slick('slickNext');
+//   });
+//   $('#prevButton').click(function(){
+//       slider.slick('slickPrev');
+//   });
+  // // Initialize and update page number
+  // function updatePageCounter(slick, currentIndex) {
+  //     var totalSlides = slick.slideCount;
+  //     var currentSlide = currentIndex + 1;
+  //     var text = ('0' + currentSlide).slice(-2) + ' <span>/' + ('0' + totalSlides).slice(-2) + '</span>';
+  //     $('.page').html(text);  // Make sure to use .html() to process HTML tags inside
+  // }
+  // // Update on slider initialization and after changes
+  // slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+  //     updatePageCounter(slick, currentSlide ? currentSlide : 0);
+  // });
+// });
