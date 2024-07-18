@@ -1058,15 +1058,15 @@ footer .bottom p {
   margin-top: 2rem;
 }
 
-.contact-container .left-side .wpcf7 label {
-  margin-top: 1rem;
+.contact-container .left-side label {
+  margin-bottom: .75rem;
 }
 
-.contact-container .left-side .wpcf7 input {
+.contact-container .left-side input {
   height: 50px;
 }
 
-.contact-container .left-side .wpcf7 textarea, .wpcf7 input {
+.contact-container .left-side textarea, input {
   border-radius: var(--par);
   border: 1px #D0D5DD solid;
   background-color: #0a31950e;
@@ -1085,7 +1085,8 @@ footer .bottom p {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  gap: 1rem;
+  gap: 2rem;
+  justify-content: space-between;
 }
 
 .contact-container .left-side form .name .firstname {
@@ -1099,7 +1100,7 @@ footer .bottom p {
   width: 50%;
 }
 
-.contact-container .left-side .wpcf7 input[type="submit"] {
+.contact-container .left-side button[type="submit"] {
   margin-top: 2rem;
   padding: 0.75rem 1rem;
   background-color: var(--primary);
@@ -1112,7 +1113,7 @@ footer .bottom p {
   cursor: pointer;
 }
 
-.contact-container .left-side .wpcf7 input[type="submit"]:hover {
+.contact-container .left-side input[type="submit"]:hover {
   border: 3px solid var(--primary);
   background-color: transparent;
   color: var(--primary);
